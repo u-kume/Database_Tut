@@ -1,0 +1,11 @@
+<% if member_signed_in? %>
+
+<h3>you have sucessfully signed in</h3>
+<%= link_to "Sign Out", destroy_mumber_session_path, :method => :delete %>
+
+<% else %>
+<h1> welcome to rails world! </h1>
+<%= link_to "Sign In", new_member_session_path, :mehtod => :get %>
+<%= link_to "Sign up", new_member_registration_path, :method => :get %>
+
+<% end %>
